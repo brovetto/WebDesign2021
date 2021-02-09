@@ -20,28 +20,7 @@
 //initializing variables to create a canvas 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-let myNumber = 62;
 
-if (true) {
-  alert("hello world...");
-  if(myNumber > 72){
-    alert("this isn't going to happen...");
-  }
-}
-
-let drawTri = true;
-let drawCir = false;
-
-let player = prompt("rock paper or scissors");
-let cpu = "paper";
-
-// this function tests whether the player won the round
-// this requires an entry from the player
-function RPS(){
-  if (player == "scissors" && cpu == "paper") {
-    drawTriangle();
-  }
-}
 
 let drawTri = true;
 let drawCir = flase;
