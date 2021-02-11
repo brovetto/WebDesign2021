@@ -1,78 +1,81 @@
-//test code
-
-// let myNum = 6;
-// const myName = "Chris";
-// alert(myName);
-// alert(myNum);
-// myNum = 25;
-// alert(myNum);
-
-// add a canvas to the page
-
-
-// const canvas = document.getElementById('canvas');
-// const ctx = canvas.getContext('2d');
-// ctx.fillStyle = 'green';
-// ctx.fillRect(10, 10, 150, 100);
-
 // let's write a program that creates rock paper scissors logic using circle, square, triangle
+//global variables
+let player;
+let mouseCoords = [];
+
+
+// gets mouse position when clicked
+
+addEventListener('mousedown', mouseClick);
+
+function mouseClick(e) {
+  console.log( `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+	Client X/Y: ${e.clientX}, ${e.clientY}`);
+	mouseCoords =  [e.clientX, e.clientY];
+  if (myCircle.x > mouseCoords[0]{
+    console.log("greater than...")
+  }
+}
+
 
 //initializing variables to create a canvas 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-let myNumber = 62;
 
-if (true) {
-  alert("hello world...");
-  if(myNumber > 72){
-    alert("this isn't going to happen...");
-  }
+//set choices
+let choices =  ["rock", "paper", "scissors"];
+
+function randChoice(x){
+    return Math.floor(Math.random()*x);
 }
 
-let drawTri = true;
-let drawCir = false;
+let cpuChoice = randChoice(choices.length);
 
-let player = prompt("rock paper or scissors");
-let cpu = "paper";
 
-// this function tests whether the player won the round
-// this requires an entry from the player
-function RPS(){
-  if (player == "scissors" && cpu == "paper") {
-    drawTriangle();
-  }
+
+console.log(choices[cpuChoice]);
+
+if (cpuChpoice== 0){
+  drawCircle
+}
+else if (cpuChouce == 1){
+  drawSquare();
+}
+else{
+  drawTriangle();
+}
 }
 
-let drawTri = true;
-let drawCir = flase;
-d = new Date(2/5)
 //init a function to draw a triangle on the canvas
-function drawTriangle() {  
-    if (d.getday()<2){
-    }
+function drawTriangle() {
       ctx.beginPath();
       ctx.moveTo(75, 50);
       ctx.lineTo(100, 75);
       ctx.lineTo(100, 25);
       ctx.fill();
     }
-//tells it to draw a circle in the canvas in measurements I want 
+
   function drawSquare(){
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
     ctx.strokeRect(50, 50, 50, 50);
   }
-  //draws circle on canvas 
+  // welcome to objects 
+  var myCircle = {
+    x: 100,
+    y:75,
+    radius: 50, 
+  };
+  console.log(myCircle.x)
   function drawCircle(){
     //ctx.beginPath();
-    ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+    ctx.arc(myCircle.x, myCircle.y, myCircle.radius, 0, 2 * Math.PI);
     ctx.stroke();
   }
 
   function main(){
-    drawTriangle();
-    drawSquare();
-    drawCircle();
+  
   }
 
 main();
