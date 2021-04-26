@@ -61,7 +61,7 @@ function drawText(color, font, align, base, text, x, y) {
 }
 
 //Timers and counters
-
+// i added the score here 
 function countUp(end) {
   timerNow = Math.floor(Date.now() / 1000);
   currentTimer = timerNow - timerThen;
@@ -346,14 +346,11 @@ function update() {
 }
 
 // ########## DRAW ALL ELEMENTS ON CANVAS ##########
+// i added this in 
 function draw() {
   // clears the canvas before drawing
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawText('black', "24px Helvetica", "left", "top", "Score: " + SCORE, 600, 0);
-  drawText('black', "24px Helvetica", "left", "top", "FPS: " + fps, 400, 0);
-  drawText('black', "24px Helvetica", "left", "top", "Delta: " + gDelta, 400, 32);
-  drawText('black', "24px Helvetica", "left", "top", "mousepos: " + mouseX + " " + mouseY, 0, 0);
-  drawText('black', "24px Helvetica", "left", "top", "mouseclick: " + mouseClickX + " " + mouseClickY, 0, 32);
   player.draw();
 
   for (let w of walls){
