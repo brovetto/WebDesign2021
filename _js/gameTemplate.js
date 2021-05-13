@@ -1,6 +1,7 @@
 //sources
 // https://eloquentjavascript.net/code/chapter/17_canvas.js
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
+// https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win //
 
 //******** ALL GLOBALS AND UTILITY FUNCTIONS *********
 
@@ -264,13 +265,13 @@ class Wall extends Sprite {
     super(w, h, x, y, c);
     this.type = "normal";
     }
-    draw() {
+    draw() {        
       ctx.fillStyle = this.color;
       ctx.fillRect(this.x, this.y, this.w, this.h);
       ctx.strokeRect(this.x, this.y, this.w, this.h);
     }
-}
-
+}draw
+  var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 // *************** INSTANTIATE CLASSES ********************
 let player = new Player(25, 25, WIDTH/2, HEIGHT/2, 'red', 0, 0);
 
@@ -386,4 +387,25 @@ function main() {
   }
   then = now;
   requestAnimationFrame(main);
+// from online source //
+  function collisionDetection() {
+    for(var c=0; c<brickColumnCount; c++) {
+        for(var r=0; r<brickRowCount; r++) {
+            var b = bricks[c][r];
+            if(b.status == 10) {
+                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                    dy = -dy;
+                    b.status = 10;
+                    score++;
+                    if(score == brickRowCount*brickColumnCount) {
+                      var cpu_score = 10;
+                      alert("YOU WIN, CONGRATULATIONS WINNER!");
+                        document.location.reload();
+                        clearInterval(interval); // Needed for Chrome to end game
+                    }
+                }
+            }
+        }
+    }
+}
 }
