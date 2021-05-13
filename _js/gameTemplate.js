@@ -52,14 +52,24 @@ for (i = 0; i < x; i++){
   arr.push(new Mob(60,60, 200, 100, 'pink', Math.random()*-2, Math.random()*-2));
 }
 }
+//background image 
+let imgready = false;
+let backgroundimg = new Image();
+backgroundimg.src = '_IMAGES/ _CODING GAME.JPG'
+backgroundimg.onload = function () {
+  backgroundimg.rdy = true; 
+
+
+
 // draws text on canvas
 function drawText(color, font, align, base, text, x, y) {
   ctx.fillStyle = color;
   ctx.font = font;
   ctx.textAlign = align;
   ctx.textBaseline = base;
-  ctx.fillText(text, x, y);
-}
+  ctx.fillText(text, x, y);-
+
+
 
 //Timers and counters
 // i added the score here 
@@ -362,7 +372,8 @@ function draw() {
   }
   for (let m of mobs2){
     m.draw();
-  }
+ 
+ctx.drawImage(backgroundimg, 0, 0) }
 }
 
 
@@ -402,10 +413,4 @@ function main() {
                       alert("YOU WIN, CONGRATULATIONS WINNER!");
                         document.location.reload();
                         clearInterval(interval); // Needed for Chrome to end game
-                    }
-                }
-            }
-        }
-    }
-}
-}
+                  
