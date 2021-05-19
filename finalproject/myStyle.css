@@ -8,7 +8,7 @@ body {
 
 /* Style the header */
 header {
-    background-color: rgb(51, 177, 145);
+    background-color: rgb(17, 223, 212);
     padding: 30px;
     text-align: center;
     font-size: 35px;
@@ -57,7 +57,7 @@ footer {
 
 .navlink {
     display: block;
-    height: 20px;
+    height: 40px;
     width: 100%;
     margin-left: auto;
     margin-bottom: .25em;
@@ -75,6 +75,45 @@ footer {
     color: inherit;
 }
 
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
 
@@ -83,62 +122,4 @@ footer {
         width: 100%;
         height: auto;
     }
-    .navbar {
-        overflow: hidden;
-        background-color: #333; 
-      }
-      
-      .navbar a {
-        float: left;
-        font-size: 16px;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-      
-      .subnav {
-        float: left;
-        overflow: hidden;
-      }
-      
-      .subnav .subnavbtn {
-        font-size: 16px;  
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-      }
-      
-      .navbar a:hover, .subnav:hover .subnavbtn {
-        background-color: red;
-      }
-      
-      .subnav-content {
-        display: none;
-        position: absolute;
-        left: 0;
-        background-color: red;
-        width: 100%;
-        z-index: 1;
-      }
-      
-      .subnav-content a {
-        float: left;
-        color: white;
-        text-decoration: none;
-      }
-      
-      .subnav-content a:hover {
-        background-color: #eee;
-        color: black;
-      }
-      
-      .subnav:hover .subnav-content {
-        display: block;
-      }
-    
-  }
+}
