@@ -17,6 +17,9 @@ let paused = false;
 let timerThen = Math.floor(Date.now() / 1000);
 
 
+
+
+
 //walls
 let walls = [];
 
@@ -412,5 +415,5 @@ function main() {
                       var cpu_score = 10;
                       alert("YOU WIN, CONGRATULATIONS WINNER!");
                         document.location.reload();
-                        clearInterval(interval); // Needed for Chrome to end game
-                  
+                        clearInterval(interval); // Needed for Chrome to end game 
+                        
